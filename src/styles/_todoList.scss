@@ -1,0 +1,81 @@
+.todo-add{
+    input{
+        border-radius: 5px 0 0 5px !important;
+    }
+
+    button{
+        border-radius: 0 5px 5px 0;
+        border: 2px solid #3498db;
+    }
+}
+
+.todo-list{
+    border-radius: 5px;
+    border: 2px solid #eee;
+
+    .empty{
+        padding: 1rem;
+    }
+}
+
+.todo-item{
+    display: grid;
+    grid-template-columns: 6rem 1fr auto;
+    grid-gap: 2rem;
+    padding: 1rem;
+
+    &.done>.title{
+    text-decoration: line-through;
+    }
+
+    .checkbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input{
+            width: 20px;
+            height: 20px;
+        }
+
+        div{
+            font-size: 14px;
+            color: #777;
+            margin-top: .5em;
+        }
+    }
+
+    .title{
+        font-size: 24px;
+        margin-left: 2rem;
+
+        button{
+            background: transparent;
+        }
+
+        input{
+            background: transparent;
+            border: 2px solid #3498db;
+        }
+    }
+
+    .actions{
+        button{
+            background-color: transparent;
+            color: red;
+
+            &:first-child{
+                color: #3498db;
+            }
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &:nth-child(even){
+        background: #eee;
+    }
+}
